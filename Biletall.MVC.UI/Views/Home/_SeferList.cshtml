@@ -1,0 +1,54 @@
+﻿@model Biletall.MVC.UI.Models.SeferListModel
+<div class="col-lg-12 col-md-12">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Seferler</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Firma Adı</th>
+                                @*<th>Kalkış Saati</th>
+        <th>Tahmini Seyehat Süresi</th>*@
+                                <th>Otobus Koltuk Yerlesim Tipi</th>
+                                <th>Kalkış Yeri</th>
+                                <th>Varış Yeri</th>
+                                <th>Sefer Tipi</th>
+                                <th>Fiyat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.SeferList != null)
+                            {
+                                foreach (Biletall.MVC.UI.Models.SeferModel sefer in Model.SeferList)
+                                {
+                            <tr>
+                                <td>@sefer.FirmaAdi</td>
+                                @*<td>@sefer.YerelInternetSaat</td>
+        <td>@sefer.YaklasikSeyahatSuresi</td>*@
+                                <td>@sefer.OtobusKoltukYerlesimTipi</td>
+                                <td>@sefer.KalkisYeri</td>
+                                <td>@sefer.SonVarisNokta</td>
+                                <td>@sefer.SeferTipiAciklamasi</td>
+                                <td>@sefer.BiletFiyatiInternet</td>
+                            </tr>
+                                }
+                            }
+                        </tbody>
+                    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

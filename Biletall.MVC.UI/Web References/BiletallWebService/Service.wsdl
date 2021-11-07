@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="XmlIslet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIslem">
+              <s:complexType>
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlYetki">
+              <s:complexType>
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XmlIsletResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlIsletResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StrIslet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strislem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stryetki" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StrIsletResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StrIsletResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OtobusKalkis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ilcelerGetirilsinMi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OtobusKalkisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OtobusKalkisResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDOKalkis">
+        <s:complexType />
+      </s:element>
+      <s:element name="IDOKalkisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDOKalkisResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDOVaris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDOVarisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDOVarisResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrenNokta">
+        <s:complexType />
+      </s:element>
+      <s:element name="TrenNoktaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrenNoktaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HavaAlan">
+        <s:complexType />
+      </s:element>
+      <s:element name="HavaAlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HavaAlanResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResmiTatilGunleri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResmiTatilGunleriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResmiTatilGunleriResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnYakinHavaNoktaGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="karaNokta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnYakinHavaNoktaGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnYakinHavaNoktaGetirResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strEnYakinHavaNoktaGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="karaNokta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strEnYakinHavaNoktaGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEnYakinHavaNoktaGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnYakinKaraNoktaGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="havaKod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnYakinKaraNoktaGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnYakinKaraNoktaGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strEnYakinKaraNoktaGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="havaKod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strEnYakinKaraNoktaGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEnYakinKaraNoktaGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CiftBiletKontrolEt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="islem" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="firmaNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tarih" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="kalkis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="varis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yolcuAd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yolcuSoyad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CiftBiletKontrolEtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CiftBiletKontrolEtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="XmlIsletSoapIn">
+    <wsdl:part name="parameters" element="tns:XmlIslet" />
+  </wsdl:message>
+  <wsdl:message name="XmlIsletSoapOut">
+    <wsdl:part name="parameters" element="tns:XmlIsletResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrIsletSoapIn">
+    <wsdl:part name="parameters" element="tns:StrIslet" />
+  </wsdl:message>
+  <wsdl:message name="StrIsletSoapOut">
+    <wsdl:part name="parameters" element="tns:StrIsletResponse" />
+  </wsdl:message>
+  <wsdl:message name="OtobusKalkisSoapIn">
+    <wsdl:part name="parameters" element="tns:OtobusKalkis" />
+  </wsdl:message>
+  <wsdl:message name="OtobusKalkisSoapOut">
+    <wsdl:part name="parameters" element="tns:OtobusKalkisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDOKalkisSoapIn">
+    <wsdl:part name="parameters" element="tns:IDOKalkis" />
+  </wsdl:message>
+  <wsdl:message name="IDOKalkisSoapOut">
+    <wsdl:part name="parameters" element="tns:IDOKalkisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDOVarisSoapIn">
+    <wsdl:part name="parameters" element="tns:IDOVaris" />
+  </wsdl:message>
+  <wsdl:message name="IDOVarisSoapOut">
+    <wsdl:part name="parameters" element="tns:IDOVarisResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrenNoktaSoapIn">
+    <wsdl:part name="parameters" element="tns:TrenNokta" />
+  </wsdl:message>
+  <wsdl:message name="TrenNoktaSoapOut">
+    <wsdl:part name="parameters" element="tns:TrenNoktaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HavaAlanSoapIn">
+    <wsdl:part name="parameters" element="tns:HavaAlan" />
+  </wsdl:message>
+  <wsdl:message name="HavaAlanSoapOut">
+    <wsdl:part name="parameters" element="tns:HavaAlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResmiTatilGunleriSoapIn">
+    <wsdl:part name="parameters" element="tns:ResmiTatilGunleri" />
+  </wsdl:message>
+  <wsdl:message name="ResmiTatilGunleriSoapOut">
+    <wsdl:part name="parameters" element="tns:ResmiTatilGunleriResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnYakinHavaNoktaGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:EnYakinHavaNoktaGetir" />
+  </wsdl:message>
+  <wsdl:message name="EnYakinHavaNoktaGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:EnYakinHavaNoktaGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="strEnYakinHavaNoktaGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:strEnYakinHavaNoktaGetir" />
+  </wsdl:message>
+  <wsdl:message name="strEnYakinHavaNoktaGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:strEnYakinHavaNoktaGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnYakinKaraNoktaGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:EnYakinKaraNoktaGetir" />
+  </wsdl:message>
+  <wsdl:message name="EnYakinKaraNoktaGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:EnYakinKaraNoktaGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="strEnYakinKaraNoktaGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:strEnYakinKaraNoktaGetir" />
+  </wsdl:message>
+  <wsdl:message name="strEnYakinKaraNoktaGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:strEnYakinKaraNoktaGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="CiftBiletKontrolEtSoapIn">
+    <wsdl:part name="parameters" element="tns:CiftBiletKontrolEt" />
+  </wsdl:message>
+  <wsdl:message name="CiftBiletKontrolEtSoapOut">
+    <wsdl:part name="parameters" element="tns:CiftBiletKontrolEtResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="XmlIslet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">İşlenecek fonksiyon xmlnode olarak gönderilir</wsdl:documentation>
+      <wsdl:input message="tns:XmlIsletSoapIn" />
+      <wsdl:output message="tns:XmlIsletSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StrIslet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">İşlenecek fonksiyon string olarak gönderilir</wsdl:documentation>
+      <wsdl:input message="tns:StrIsletSoapIn" />
+      <wsdl:output message="tns:StrIsletSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OtobusKalkis">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan Kara Kalkış noktaları Listesi (1 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:OtobusKalkisSoapIn" />
+      <wsdl:output message="tns:OtobusKalkisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDOKalkis">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan IDO Kalkış noktaları Listesi (1 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:IDOKalkisSoapIn" />
+      <wsdl:output message="tns:IDOKalkisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDOVaris">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan IDO Varış noktaları Listesi (1 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:IDOVarisSoapIn" />
+      <wsdl:output message="tns:IDOVarisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrenNokta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan IDO Kalkış noktaları Listesi (1 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:TrenNoktaSoapIn" />
+      <wsdl:output message="tns:TrenNoktaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HavaAlan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan HavaAlan Listesi (12 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:HavaAlanSoapIn" />
+      <wsdl:output message="tns:HavaAlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResmiTatilGunleri">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sistemde Bulunan HavaAlan Listesi (24 Saat)</wsdl:documentation>
+      <wsdl:input message="tns:ResmiTatilGunleriSoapIn" />
+      <wsdl:output message="tns:ResmiTatilGunleriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinHavaNoktaGetir">
+      <wsdl:input message="tns:EnYakinHavaNoktaGetirSoapIn" />
+      <wsdl:output message="tns:EnYakinHavaNoktaGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinHavaNoktaGetir">
+      <wsdl:input message="tns:strEnYakinHavaNoktaGetirSoapIn" />
+      <wsdl:output message="tns:strEnYakinHavaNoktaGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinKaraNoktaGetir">
+      <wsdl:input message="tns:EnYakinKaraNoktaGetirSoapIn" />
+      <wsdl:output message="tns:EnYakinKaraNoktaGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinKaraNoktaGetir">
+      <wsdl:input message="tns:strEnYakinKaraNoktaGetirSoapIn" />
+      <wsdl:output message="tns:strEnYakinKaraNoktaGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CiftBiletKontrolEt">
+      <wsdl:input message="tns:CiftBiletKontrolEtSoapIn" />
+      <wsdl:output message="tns:CiftBiletKontrolEtSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="XmlIslet">
+      <soap:operation soapAction="http://tempuri.org/XmlIslet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StrIslet">
+      <soap:operation soapAction="http://tempuri.org/StrIslet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtobusKalkis">
+      <soap:operation soapAction="http://tempuri.org/OtobusKalkis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDOKalkis">
+      <soap:operation soapAction="http://tempuri.org/IDOKalkis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDOVaris">
+      <soap:operation soapAction="http://tempuri.org/IDOVaris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrenNokta">
+      <soap:operation soapAction="http://tempuri.org/TrenNokta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HavaAlan">
+      <soap:operation soapAction="http://tempuri.org/HavaAlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResmiTatilGunleri">
+      <soap:operation soapAction="http://tempuri.org/ResmiTatilGunleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinHavaNoktaGetir">
+      <soap:operation soapAction="http://tempuri.org/EnYakinHavaNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinHavaNoktaGetir">
+      <soap:operation soapAction="http://tempuri.org/strEnYakinHavaNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinKaraNoktaGetir">
+      <soap:operation soapAction="http://tempuri.org/EnYakinKaraNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinKaraNoktaGetir">
+      <soap:operation soapAction="http://tempuri.org/strEnYakinKaraNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CiftBiletKontrolEt">
+      <soap:operation soapAction="http://tempuri.org/CiftBiletKontrolEt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="XmlIslet">
+      <soap12:operation soapAction="http://tempuri.org/XmlIslet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StrIslet">
+      <soap12:operation soapAction="http://tempuri.org/StrIslet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtobusKalkis">
+      <soap12:operation soapAction="http://tempuri.org/OtobusKalkis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDOKalkis">
+      <soap12:operation soapAction="http://tempuri.org/IDOKalkis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDOVaris">
+      <soap12:operation soapAction="http://tempuri.org/IDOVaris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrenNokta">
+      <soap12:operation soapAction="http://tempuri.org/TrenNokta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HavaAlan">
+      <soap12:operation soapAction="http://tempuri.org/HavaAlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResmiTatilGunleri">
+      <soap12:operation soapAction="http://tempuri.org/ResmiTatilGunleri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinHavaNoktaGetir">
+      <soap12:operation soapAction="http://tempuri.org/EnYakinHavaNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinHavaNoktaGetir">
+      <soap12:operation soapAction="http://tempuri.org/strEnYakinHavaNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnYakinKaraNoktaGetir">
+      <soap12:operation soapAction="http://tempuri.org/EnYakinKaraNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strEnYakinKaraNoktaGetir">
+      <soap12:operation soapAction="http://tempuri.org/strEnYakinKaraNoktaGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CiftBiletKontrolEt">
+      <soap12:operation soapAction="http://tempuri.org/CiftBiletKontrolEt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://62.248.56.117/WSTEST/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://62.248.56.117/WSTEST/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
